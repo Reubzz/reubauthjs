@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            box-sizing: border-box;
+            /* width: 100vw; */
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #232323;
+            font-family: "Roboto";
+
+        }
+        form {
+            width: 40%;
+        }
+        input {
+            width: -webkit-fill-available;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        label {
+            color: white;
+        }
+        button {
+            padding: 10px 30px;
+            width: 100%;
+            align-self: center;
+            background-color: #6e88cf;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: 600;
+            border: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="/register" method="post">
+        <label for="name">Name: </label>
+        <input type="text" name="name" placeholder="Enter your Name"><br><br>
+        <label for="username">Username: </label>
+        <input type="text" name="username" placeholder="Enter Unique Username"><br><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" placeholder="Enter Email Address"><br><br>
+        <label for="number">Phone Number: </label>
+        <input type="number" minlength="10" maxlength="10" placeholder="Enter Phone Number"><br><br> 
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Enter Password"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

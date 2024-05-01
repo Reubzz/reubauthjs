@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Home Page</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            box-sizing: border-box;
+            /* width: 100vw; */
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #232323;
+            font-family: 'Roboto';
+        }
+        a {
+            padding: 20px 30px;
+            background-color: #6e88cf;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+    </style>
+    
+</head>
+<body>
+    <% if (user._id) { %>
+        <h1>Hello <%= user.name %> (<%= user.username %>)</h1>
+        <a href="/logout">Logout</a>
+    <% } else { %>
+        <h1>Kindly Login or Register</h1>
+        <a href="/login">Login</a>
+        <br>
+        <br>
+        <a href="/register">Register</a>
+    <% } %>
+</body>
+</html>

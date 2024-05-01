@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            box-sizing: border-box;
+            /* width: 100vw; */
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #232323;
+            font-family: "Roboto";
+
+        }
+        form {
+            width: 40%;
+        }
+        input {
+            width: -webkit-fill-available;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        label {
+            color: white;
+        }
+        button {
+            padding: 10px 30px;
+            width: 100%;
+            align-self: center;
+            background-color: #6e88cf;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: 600;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="/login" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" name="username" placeholder="Username"><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" name="password" placeholder="Password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
