@@ -1,5 +1,5 @@
 {
-  "name": "reubz-authjs",
+  "name": "authjs",
   "version": "1.0.0",
   "description": "A Authentication System using jsonwebtokens (jwt) and setting login cookies. This package manages the backend code required to run a authentication system correctly. ",
   "main": "index.js",

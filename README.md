@@ -74,5 +74,19 @@ const authSys = require('reubz-authjs')({
 });
 ```
 
+
+```js
+const authSys = require('reubz-authjs')({
+    dbUri: // uri to your Database,
+    jwtSecretKey: // your secret JWT Key.,
+    cookieFields: {
+        username: true,
+        _id: true,
+        // Enter Fields here that you need in the cookie variable.
+    },
+    loginExpiryIn: // Time in secs afterwhich the login expires.
+});
+```
+
 ## Help
 If you don't understand something in the documentation, you are experiencing problems, or you just need a gentle nudge in the right direction, feel free to drop me a email - [contact@reubz.io](mailto:contact@reubz.io) or 
