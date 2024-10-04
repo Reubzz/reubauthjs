@@ -9,9 +9,19 @@
     "auth-sys",
     "authentication-system"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reubzz/reubauthjs.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Reubzz/reubauthjs/issues"
+  },
+  "homepage": "https://github.com/Reubzz/reubauthjs#readme",
   "author": "Reuben George <contact@reubz.io>",
   "license": "ISC",
-  "repository": "reubzz/reubz-authjs",
   "dependencies": {
     "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.2",
