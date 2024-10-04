@@ -13,7 +13,7 @@ Installation is done using the
 [`npm install`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) command:
 
 ```console
-$ npm install reubauthjs
+$ npm install github:Reubzz/reubauthjs
 ```
 
 Follow [our quick start guide](#quick-start-guide) for more information.
