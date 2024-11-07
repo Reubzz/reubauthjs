@@ -26,6 +26,7 @@ module.exports = function(options={dbUri, jwtSecretKey, cookieFields: {}, loginE
         global.jwtSecretKey = options.jwtSecretKey;
         global.cookieFields = options.cookieFields;
         global.loginExpiryIn = options.loginExpiryIn;
+        global.uniqueLoginField = options.uniqueLoginField;
 
 
         // Create Modules

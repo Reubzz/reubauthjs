@@ -42,24 +42,23 @@ const error = {
 
 exports.loginUser = async (options={fields: {}, Schema, response}) => {
 
-    const username = options.fields.username || null
-    const password = options.fields.password || null;
+    const loginID = options.fields[uniqueLoginField] || null
+    const loginPassword = options.fields.password || null;
     
-
     return new Promise(async (resolve, reject) => {
         if(!options.Schema) {
             reject(error[104]);
             return;
         }
         
-        if (!username || !password || !options.fields) {
+        if (!loginID || !loginPassword || !options.fields) {
             reject(error[101]);
             return;
         }
         
         try {
             // Check for user in DB
-            const check = await options.Schema.findOne({ username: username })
+            const check = await options.Schema.findOne({ [uniqueLoginField]: loginID })
             
             // ! If no user found
             if (!check) {
@@ -69,13 +68,13 @@ exports.loginUser = async (options={fields: {}, Schema, response}) => {
             
             // Compare password
             // ! password incorrect
-            if (check.password != password) {
+            if (check.password != loginPassword) {
                 reject(error[103]);
                 return;
             }
     
             // All good - username + password correct
-            if (check.password == password) {
+            if (check.password == loginPassword) {
                 // ** Sucessful Login **
                 jwtSign(check, options.response) 
                 resolve({ code: 200, message: "Login Successful", userdata: check });

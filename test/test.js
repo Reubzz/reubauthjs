@@ -12,7 +12,8 @@ const authSys = require('../index')({
         email: true,
         role: true
     },
-    loginExpiryIn: 1000
+    loginExpiryIn: 1000,
+    uniqueLoginField: "email"
 });
 
 const port = 80;
@@ -51,7 +52,7 @@ app.get('/logout', (req, res) => {
 app.post('/login', (req, res) => {
     authSys.login({
         fields: { 
-            username: req.body.username, 
+            email: req.body.username, 
             password: req.body.password 
         }, 
         Schema: userDB, 

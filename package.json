@@ -1,5 +1,5 @@
 {
-  "name": "authjs",
+  "name": "reubauthjs",
   "version": "1.0.0",
   "description": "A Authentication System using jsonwebtokens (jwt) and setting login cookies. This package manages the backend code required to run a authentication system correctly. ",
   "main": "index.js",
@@ -23,6 +23,7 @@
   "author": "Reuben George <contact@reubz.io>",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",
