@@ -11,7 +11,7 @@ exports.logoutUser = async (options={response}) => {
     return new Promise(async (resolve, reject) => {
         try{
             options.response.cookie("jwt", "", { maxAge: "-1", sameSite: 'lax'  })
-            options.response.redirect("back")
+            options.response.location(req.get("Referrer") || "/")
             resolve({ code: 200, message: "Logged Out User" })
         } catch(error) {
             console.log(error)
